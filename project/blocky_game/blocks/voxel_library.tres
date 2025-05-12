@@ -1,4 +1,4 @@
-[gd_resource type="VoxelBlockyLibrary" load_steps=57 format=3 uid="uid://ctn2wqssoxvj5"]
+[gd_resource type="VoxelBlockyLibrary" load_steps=69 format=3 uid="uid://ctn2wqssoxvj5"]
 
 [ext_resource type="ArrayMesh" uid="uid://rq0nk6t5jqyc" path="res://blocky_game/blocks/grass/grass.obj" id="1"]
 [ext_resource type="ArrayMesh" uid="uid://dmi1fa4udxhx3" path="res://blocky_game/blocks/dirt/dirt.obj" id="2"]
@@ -29,6 +29,12 @@
 [ext_resource type="ArrayMesh" uid="uid://c6qtk2kyul3nn" path="res://blocky_game/blocks/rail/rail_slope_nx.obj" id="24"]
 [ext_resource type="ArrayMesh" uid="uid://c2lwrnrx0on2g" path="res://blocky_game/blocks/leaves/leaves.obj" id="25"]
 [ext_resource type="ArrayMesh" uid="uid://bhkxvih1xa2a0" path="res://blocky_game/blocks/dead_shrub/dead_shrub.obj" id="26"]
+[ext_resource type="Texture2D" uid="uid://d2edx1fcbxkdc" path="res://blocky_game/blocks/red_torch/red_torch_texture.png" id="30_q4ece"]
+[ext_resource type="ArrayMesh" uid="uid://dw6gy24s46i6p" path="res://blocky_game/blocks/red_torch/red_torch.obj" id="31_6fvos"]
+[ext_resource type="Texture2D" uid="uid://0s6l8vut7uue" path="res://blocky_game/blocks/green_torch/green_torch_texture.png" id="32_lade4"]
+[ext_resource type="ArrayMesh" uid="uid://dq22j6wcmp4ko" path="res://blocky_game/blocks/green_torch/green_torch.obj" id="33_8mrmn"]
+[ext_resource type="Texture2D" uid="uid://d0n63ml3ct47g" path="res://blocky_game/blocks/blue_torch/blue_torch_texture.png" id="34_nicr2"]
+[ext_resource type="ArrayMesh" uid="uid://cu72uqcjx16ig" path="res://blocky_game/blocks/blue_torch/blue_torch.obj" id="35_i18ja"]
 
 [sub_resource type="VoxelBlockyModelEmpty" id="VoxelBlockyModelEmpty_mk2sr"]
 resource_name = "air"
@@ -239,5 +245,47 @@ material_override_0 = ExtResource("6_7k7uf")
 collision_enabled_0 = true
 mesh = ExtResource("26")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xlq4u"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("30_q4ece")
+texture_filter = 0
+
+[sub_resource type="VoxelBlockyModelMesh" id="VoxelBlockyModelMesh_q4ece"]
+resource_name = "red_torch"
+light_color = Color(0.890196, 0.301961, 0.215686, 1)
+light_range = 15
+culls_neighbors = false
+material_override_0 = SubResource("StandardMaterial3D_xlq4u")
+collision_enabled_0 = true
+mesh = ExtResource("31_6fvos")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nicr2"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("32_lade4")
+texture_filter = 0
+
+[sub_resource type="VoxelBlockyModelMesh" id="VoxelBlockyModelMesh_i18ja"]
+resource_name = "green_torch"
+light_color = Color(0.439216, 0.901961, 0.207843, 1)
+light_range = 15
+culls_neighbors = false
+material_override_0 = SubResource("StandardMaterial3D_nicr2")
+collision_enabled_0 = true
+mesh = ExtResource("33_8mrmn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dbwy"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("34_nicr2")
+texture_filter = 0
+
+[sub_resource type="VoxelBlockyModelMesh" id="VoxelBlockyModelMesh_u5hj0"]
+resource_name = "blue_torch"
+light_color = Color(0.054902, 0.415686, 1, 1)
+light_range = 15
+culls_neighbors = false
+material_override_0 = SubResource("StandardMaterial3D_5dbwy")
+collision_enabled_0 = true
+mesh = ExtResource("35_i18ja")
+
 [resource]
-models = Array[VoxelBlockyModel]([SubResource("VoxelBlockyModelEmpty_mk2sr"), SubResource("VoxelBlockyModelMesh_7h3nj"), SubResource("VoxelBlockyModelMesh_7ws3s"), SubResource("VoxelBlockyModelMesh_dgg18"), SubResource("VoxelBlockyModelMesh_82a53"), SubResource("VoxelBlockyModelMesh_rid6c"), SubResource("VoxelBlockyModelMesh_w6frs"), SubResource("VoxelBlockyModelMesh_b3d46"), SubResource("VoxelBlockyModelMesh_ilklx"), SubResource("VoxelBlockyModelMesh_8o2q5"), SubResource("VoxelBlockyModelMesh_dos6x"), SubResource("VoxelBlockyModelMesh_ldqsp"), SubResource("VoxelBlockyModelMesh_rqv2x"), SubResource("VoxelBlockyModelMesh_lt74g"), SubResource("VoxelBlockyModelMesh_rydis"), SubResource("VoxelBlockyModelMesh_k70eq"), SubResource("VoxelBlockyModelMesh_7pgsh"), SubResource("VoxelBlockyModelMesh_qbgg8"), SubResource("VoxelBlockyModelMesh_iqgm8"), SubResource("VoxelBlockyModelMesh_1mglx"), SubResource("VoxelBlockyModelMesh_udleu"), SubResource("VoxelBlockyModelMesh_p61kv"), SubResource("VoxelBlockyModelMesh_txenr"), SubResource("VoxelBlockyModelMesh_ruhud"), SubResource("VoxelBlockyModelMesh_5qhvr"), SubResource("VoxelBlockyModelMesh_g6mep"), SubResource("VoxelBlockyModelMesh_kcviq")])
+models = Array[VoxelBlockyModel]([SubResource("VoxelBlockyModelEmpty_mk2sr"), SubResource("VoxelBlockyModelMesh_7h3nj"), SubResource("VoxelBlockyModelMesh_7ws3s"), SubResource("VoxelBlockyModelMesh_dgg18"), SubResource("VoxelBlockyModelMesh_82a53"), SubResource("VoxelBlockyModelMesh_rid6c"), SubResource("VoxelBlockyModelMesh_w6frs"), SubResource("VoxelBlockyModelMesh_b3d46"), SubResource("VoxelBlockyModelMesh_ilklx"), SubResource("VoxelBlockyModelMesh_8o2q5"), SubResource("VoxelBlockyModelMesh_dos6x"), SubResource("VoxelBlockyModelMesh_ldqsp"), SubResource("VoxelBlockyModelMesh_rqv2x"), SubResource("VoxelBlockyModelMesh_lt74g"), SubResource("VoxelBlockyModelMesh_rydis"), SubResource("VoxelBlockyModelMesh_k70eq"), SubResource("VoxelBlockyModelMesh_7pgsh"), SubResource("VoxelBlockyModelMesh_qbgg8"), SubResource("VoxelBlockyModelMesh_iqgm8"), SubResource("VoxelBlockyModelMesh_1mglx"), SubResource("VoxelBlockyModelMesh_udleu"), SubResource("VoxelBlockyModelMesh_p61kv"), SubResource("VoxelBlockyModelMesh_txenr"), SubResource("VoxelBlockyModelMesh_ruhud"), SubResource("VoxelBlockyModelMesh_5qhvr"), SubResource("VoxelBlockyModelMesh_g6mep"), SubResource("VoxelBlockyModelMesh_kcviq"), SubResource("VoxelBlockyModelMesh_q4ece"), SubResource("VoxelBlockyModelMesh_i18ja"), SubResource("VoxelBlockyModelMesh_u5hj0")])

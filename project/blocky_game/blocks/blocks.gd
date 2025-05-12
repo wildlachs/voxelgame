@@ -143,6 +143,30 @@ func _init():
 		"transparent": true,
 		"backface_culling": false
 	})
+	_create_block({
+		"name": "red_torch",
+		"gui_model": "red_torch.obj",
+		"rotation_type": ROTATION_TYPE_NONE,
+		"voxels": ["red_torch"],
+		"transparent": false,
+		"backface_culling": false
+	})
+	_create_block({
+		"name": "green_torch",
+		"gui_model": "green_torch.obj",
+		"rotation_type": ROTATION_TYPE_NONE,
+		"voxels": ["green_torch"],
+		"transparent": false,
+		"backface_culling": false
+	})
+	_create_block({
+		"name": "blue_torch",
+		"gui_model": "blue_torch.obj",
+		"rotation_type": ROTATION_TYPE_NONE,
+		"voxels": ["blue_torch"],
+		"transparent": false,
+		"backface_culling": false
+	})
 
 
 func get_block(id: int) -> Block:

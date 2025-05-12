@@ -15,6 +15,9 @@ const LOG = 4
 const LEAVES = 25
 const TALL_GRASS = 8
 const DEAD_SHRUB = 26
+const RED_TORCH = 27
+const GREEN_TORCH = 28
+const BLUE_TORCH = 29
 #const STONE = 8
 
 const _CHANNEL = VoxelBuffer.CHANNEL_TYPE
@@ -124,6 +127,8 @@ func _generate_block(buffer: VoxelBuffer, origin_in_voxels: Vector3i, lod: int):
 							var foliage = TALL_GRASS
 							if rng.randf() < 0.1:
 								foliage = DEAD_SHRUB
+							if rng.randf() < 0.02:
+								foliage = [RED_TORCH, GREEN_TORCH, BLUE_TORCH].pick_random()
 							buffer.set_voxel(foliage, x, relative_height, z, _CHANNEL)
 				
 				# Water
