@@ -4,3 +4,4 @@
 
 [resource]
 library = ExtResource("1")
+smooth_lighting = true
